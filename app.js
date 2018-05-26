@@ -1,6 +1,4 @@
-const server = require ('server');
-
-server(
+const server = require(server);
 var xhr = new XMLHttpRequest();
 xhr.open("GET", "https://theimdbapi.org/api/find/movie?title=transformers&year=2007", true);
 xhr.withCredentials = true;
@@ -20,4 +18,3 @@ function test(){
 }
 */    
 xhr.send();
-)
