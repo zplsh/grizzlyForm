@@ -1,10 +1,13 @@
+const server = require ('server');
+
+server(
 var xhr = new XMLHttpRequest();
 xhr.open("GET", "https://theimdbapi.org/api/find/movie?title=transformers&year=2007", true);
-//xhr.withCredentials = true;
+xhr.withCredentials = true;
 xhr.onload = function Test() {
-    this.film  = xhr.responseText;
-    this.result =   document.getElementById("result");
-    result.innerHTML = this.film;
+    let film  = xhr.responseText;
+    let result =   document.getElementById("result");
+    result.innerHTML = film;
     return;
 };
 
@@ -17,3 +20,4 @@ function test(){
 }
 */    
 xhr.send();
+)
