@@ -10,11 +10,15 @@
     "server": "^1.0.18"
   },
   "devDependencies": {
-    "webpack": "^4.9.1"
+    "babel-core": "^6.26.3",
+    "babel-loader": "^7.1.4",
+    "babel-preset-env": "^1.7.0",
+    "webpack": "^4.9.1",
+    "webpack-cli": "^2.1.4",
+    "webpack-dev-server": "^3.1.4"
   },
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "node server.js"
+    "dev": "webpack-dev-server --inline --hot"
   },
   "repository": {
     "type": "git",
