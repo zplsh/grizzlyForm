@@ -1,6 +1,6 @@
 
 var xhr = new XMLHttpRequest();
-xhr.open("GET", "http://www.omdbapi.com/?apikey=adac724d&t=batman", true);
+xhr.open("GET", "https://www.omdbapi.com/?apikey=adac724d&t=batman", true);
 //xhr.withCredentials = true;
 xhr.onload = function Test() {
     let film  = xhr.responseText;
