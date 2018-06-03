@@ -1,4 +1,5 @@
 
+<<<<<<< HEAD
 'use strict';
 
 function httpGet(url) {
@@ -25,6 +26,15 @@ function httpGet(url) {
         xhr.send();
     });
 
+=======
+var xhr = new XMLHttpRequest();
+xhr.open("GET", "https://www.omdbapi.com/?apikey=adac724d&t=batman", true);
+//xhr.withCredentials = true;
+xhr.onload = function Test() {
+    let film  = xhr.responseText;
+    let result =   document.getElementById("result");
+    result.innerHTML = film;
+>>>>>>> 2686c5448a16b3678da9672683327142aba413e5
 };
 
 
