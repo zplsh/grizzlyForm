@@ -8,21 +8,34 @@
 
   <h1>Поиск по фильмам IMDB</h1>
   <p>Hello!!!</p>
-  <form action="#">
-      <input type = text value="Введите название фильма">
-      <button value = "Искать!">Искать!</button>
-  </form>
 
-    <header>
-    </header>
-    <div class = "main" id = "result"></div>
-        <div class = "main main__form">
-        </div>
-  <script src ="build/bundle.js"></script>
-  <script src ="server.js"></script>
-  <script src ="app.js"></script>
- <!-- <script src ="src/index.js"></script> -->
-  <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+      <form class = "main-form" onsubmit="return false">
+          <input type = text value="Введите название фильма">
+          <button type = "submit" value = "Искать!">Искать!</button>
+      </form>
+
+        <div class = "main" id = "result"></div>
+        <div class = "main main__form"></div>
+        <script src ="build/bundle.js"></script>
+        <script src ="app.js"></script>
+     <!-- <script src ="src/index.js"></script> -->
+        <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+        <script>
+          'use strict'
+
+          function modifyURL(){
+              let test = `http://www.omdbapi.com/?apikey=adac724d&t=${userInput}`;
+              console.log(test);
+          }
+
+          document.body.addEventListener("DOMContentLoaded", function(){
+              let form = document.querySelector("main__form");
+              console.log(form);
+              form.addEventListener("submit", modifyURL);
+
+          });
+
+        </script>
   </body>
 
 </html>

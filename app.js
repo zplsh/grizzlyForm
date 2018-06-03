@@ -25,13 +25,15 @@ function httpGet(url) {
         xhr.send();
     });
 }
-httpGet("http://www.omdbapi.com/?apikey=adac724d&t=batman")
+httpGet("http://www.omdbapi.com/?apikey=adac724d&t=big?fish")
     .then(response => {
-        console.log(response);
+
         let filmObj = JSON.parse(response);
         return filmObj;
     })
     .then(filmObj => {
+        let poster1 = filmObj.Poster;
+        console.log(poster1);
         let div = document.createElement('div');
         div.className = 'film';
         div.innerHTML = ` Title: <strong> ${filmObj.Title}</strong> <br> 
@@ -40,7 +42,8 @@ httpGet("http://www.omdbapi.com/?apikey=adac724d&t=batman")
         Genre: ${filmObj.Genre} <br>
         Released: ${filmObj.Released} <br>
         Plot: ${filmObj.Plot} <br>
-        <img class = "main main-img" src="https://ia.media-imdb.com/images/M/MV5BMTYwNjAyODIyMF5BMl5BanBnXkFtZTYwNDMwMDk2._V1_SX300.jpg">
+        
+        <img class = "main main-img" src = ${poster1}>
         `;
         document.body.appendChild(div);
 
