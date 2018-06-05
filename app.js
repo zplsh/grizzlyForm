@@ -1,9 +1,10 @@
 
 'use strict';
+let urlEncoded = require('./src/import.js');
 
 function httpGet(url) {
 
-    return new Promise(function (resolve, reject) {
+    return new Promise(function(resolve, reject) {
 
         let xhr = new XMLHttpRequest();
         xhr.open('GET', url, true);
@@ -25,7 +26,7 @@ function httpGet(url) {
         xhr.send();
     });
 }
-httpGet("http://www.omdbapi.com/?apikey=adac724d&t=big?fish")
+httpGet(urlEncoded.getInputVal())
     .then(response => {
 
         let filmObj = JSON.parse(response);

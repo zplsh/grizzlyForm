@@ -20,42 +20,9 @@
 <div class="main" id="result"></div>
 <script src="build/bundle.js"></script>
 <script src="app.js"></script>
-<!-- <script src ="src/index.js"></script> -->
+<script src ="src/import.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
-<script>
 
-    (function(){
-
-        'use strict'
-
-        document.getElementById('form1').addEventListener('submit', getInputVal);
-
-        function getInputVal(event) {
-            let msg = document.getElementById('input1').value;
-            return modifyValToUrl(msg)
-        }
-        function modifyValToUrl(msg) {
-            let arr = msg.split(' ');
-            let arrExt = arr.map(function(i) {
-                return i;
-            })
-            let arrStr = arrExt.join('?');
-            alert (`http://www.omdbapi.com/?apikey=adac724d&t=${arrStr}`);
-        }
-
-    })()
-    /*
-      function modifyURL(){
-          let test = `http://www.omdbapi.com/?apikey=adac724d&t=${userInput}`;
-          console.log(test);
-      }
-      document.body.addEventListener("DOMContentLoaded", function(){
-          let form = document.querySelector("main__form");
-          console.log(form);
-          form.addEventListener("submit", modifyURL);
-      });
-*/
-</script>
 </body>
 
 </html>
