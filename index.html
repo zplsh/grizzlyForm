@@ -6,11 +6,11 @@
   <body>
 
 
-  <h1>Поиск по фильмам IMDB</h1>
+  <h1>Movie search engine</h1>
   <p>Hello!!!</p>
 
-      <form class = "main-form" onsubmit="return false">
-          <input type = text value="Введите название фильма">
+      <form  id = "main-form" onsubmit="return false;">
+          <input type = "text" value="">
           <button type = "submit" value = "Искать!">Искать!</button>
       </form>
 
@@ -21,20 +21,28 @@
      <!-- <script src ="src/index.js"></script> -->
         <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
         <script>
-          'use strict'
+          'use strict';
+
+          document.body.addEventListener("submit", function(){
+              let input = document.getElementById("main-form").value;
+
+              alert(input);
+          });
 
           function modifyURL(){
               let test = `http://www.omdbapi.com/?apikey=adac724d&t=${userInput}`;
               console.log(test);
           }
 
+
+          /*
           document.body.addEventListener("DOMContentLoaded", function(){
               let form = document.querySelector("main__form");
-              console.log(form);
+              console.log(`Form ${form}`);
               form.addEventListener("submit", modifyURL);
 
           });
-
+           */
         </script>
   </body>
 
