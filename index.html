@@ -1,27 +1,39 @@
+<!DOCTYPE html>
 <html>
 
 <head>
-    <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+  <link href="https://fonts.googleapis.com/css?family=Share+Tech+Mono" rel="stylesheet">
+  <link href="style.css" rel="stylesheet">
 </head>
 
 <body>
 
+  <header>
+    <img class="imdb-img" src="http://ia.media-imdb.com/images/M/MV5BMTk3ODA4Mjc0NF5BMl5BcG5nXkFtZTgwNDc1MzQ2OTE@._V1_.png" alt="IMDB" height="70" width="130"></img>
+    <h1>Поиск по фильмам</h1>
+    <h3>IMDB movies search machine</h3>
+  </header>
 
-<h1>Поиск по фильмам IMDB</h1>
-<p>Hello!!!</p>
+  <div class="my-flex-container">
+      <div class="my-flex-block">Только английский язык | English only</div>
+      <div class="my-flex-block my-flex-block-form">
+          <form onsubmit="return false;" id="form1">
+          <input type="text" id="input1" placeholder="Например: Batman">
+          <input type="submit" value="Искать!">
+          </form>
+      </div>
+      <div class="my-flex-block"> 
+          <div class="main" id="result">
+          </div>
+      </div>
+  </div>  
 
-<div class="main">
-    <form onsubmit="return false;" id="form1">
-        <input type="text" id="input1" value="default">
-        <input type="submit" value="submit1">
-    </form>
-</div>
-
-<div class="main" id="result"></div>
-<script src="build/bundle.js"></script>
-<script src="app.js"></script>
-<script src ="src/import.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+  <script src="build/bundle.js"></script>
+  <script src="app.js"></script>
+  <script src="script.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
 
 </body>
 
