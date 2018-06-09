@@ -2,7 +2,7 @@
 
 body {
   font-family: "Apercu Mono Regular", 'Andale Mono', monospace;
-  font-size: 14px;
+  font-size: 20px;
   position: relative;
   color: black;
   background-color: white;
@@ -12,8 +12,8 @@ body {
 
 header {
   border-bottom: 2px solid #E6B91E;
+  padding: 30px 0px 30px 0px;
 }
-
 
 .my-flex-container{
   display: flex;
@@ -23,10 +23,37 @@ header {
   padding: 30px 0px 0px 0px;
 }
 
+img.main.main-img {
+    margin: 150px 0px 30px 300px;
+    border: 10px solid #E6B91E;
+   
+}
+
+
 .my-flex-block-form{
   padding: 15px 0px 0px 0px;
 }
 
+.main-search{
+  border: none;
+  border-bottom: 2px solid #E6B91E;
+  width: 500px;
+  height: 50px;
+  font-size: 20px;
+  margin-bottom: 20px;
+  padding: 5px 35px 5px 35px
+}
+
+button.btn.btn-block.btn-primary {
+    width: 250px;
+    background-color: rgb(230, 185, 30);
+    font-size: 20px;
+}
+
+button.btn.btn-block.btn-primary:hover {
+  background-color: white;
+  color: #E6B91E;
+}
 
 .filmContent-error{
   padding: 10px 30px 10px 30px;
@@ -43,30 +70,19 @@ header {
   cursor: pointer;
   
 }
-.imdb-img {
-  position: absolute;
-  
-  left: 300px;
-}
-
-h1 {
-  position: relative;
-}
-
-h3 {
-  position: relative;
-}
 
 .my-flex-block-form {
   margin: 0px 50px 0px 0px;
 }
 
-.film {
-  padding: 30px 0px 0px 30px;
-  background-color: rgb(143,143,159);
-  background: -moz-radial-gradient(circle, rgba(143,143,159,1) 0%, rgba(208,229,231,1) 100%);
-  background: -webkit-radial-gradient(circle, rgba(143,143,159,1) 0%, rgba(208,229,231,1) 100%);
-  background: radial-gradient(circle, rgba(143,143,159,1) 0%, rgba(208,229,231,1) 100%);
-  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#8f8f9f",endColorstr="#d0e5e7",GradientType=1);;
+div#innerFilm {
+  /*padding: 30px 0px 0px 30px;*/
   background-repeat: no-repeat;
 }
+
+/*
+footer{
+  background-color: #E6B91E;
+  height: 50px;
+}
+*/
