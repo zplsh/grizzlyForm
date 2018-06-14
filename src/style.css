@@ -20,11 +20,15 @@ header {
   flex-direction: column;
   justify-content: center;
   align-items: baseline;
-  padding: 30px 0px 0px 0px;
+  padding: 30px 0px 30px 15px;
+}
+
+.my-flex-container-main-content{
+    height: 100%;
 }
 
 img.main.main-img {
-    margin: 150px 0px 30px 300px;
+//    margin: 150px 0px 30px 300px;
     border: 10px solid #E6B91E;
    
 }
@@ -76,13 +80,12 @@ button.btn.btn-block.btn-primary:hover {
 }
 
 div#innerFilm {
-  /*padding: 30px 0px 0px 30px;*/
   background-repeat: no-repeat;
 }
 
-/*
+
 footer{
   background-color: #E6B91E;
   height: 50px;
 }
-*/
+
